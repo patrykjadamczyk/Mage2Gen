@@ -265,9 +265,9 @@ class Xmlnode:
 			output = tostring(el, 'utf-8')
 			reparsed = minidom.parseString(output)
 			if self.xsd:
-				return reparsed.toprettyxml(indent="\t").split('\n', 1)[-1]
+				return reparsed.toprettyxml(indent="    ").split('\n', 1)[-1]
 			else:
-				return reparsed.toprettyxml(indent="\t")
+				return reparsed.toprettyxml(indent="    ")
 
 	def save(self, xml_path):
 		try:
